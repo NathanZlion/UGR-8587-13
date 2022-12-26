@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - 2</title>
+</head>
+
+<body>
+    <nav>
+        <a href="signup-1.html" title="Go Back"><img src="images/back-button.png" width="20px"></a>
+        <p>Step 2 of 2</p>
+    </nav>
+
+    <aside>
+        <img src="images/graduation hat.png">
+        <h1>WELCOME BACK TO GRADEBOOK !</h1>
+    </aside>
+    <form method="post" action="#">
+        <h1>CREATE ACCOUNT</h1>
+        <label for="universityName">University or College Name : </label>
+        <input type="text" name="Name" id="universityName" placeholder="Addis Ababa University" required>
+        <label for="numberOfYears">Years of Study :</label>
+        <input name="numberOfYears" type="number" value="5" id="numberOfYears">
+        <label for="studyLevel">Study Level : </label>
+        <select id="studyLevel">
+            <option value="highSchool">High School</option>
+            <option value="underGraduate" selected>Under Graduate</option>
+            <option value="postGraduate">Post Graduate</option>
+          </select>        
+        <p>Grading System</p>
+        <input type="radio" id="gpa4.0" name="gpa" value="4.0" checked>
+        <label for="gpa4.0">4.0</label>
+        <input type="radio" id="gpa5.0" name="gpa" value="5.0">
+        <label for="gpa5.0">5.0</label>
+
+        <input type="submit" value="CREATE ACCOUNT">
+    </form>
+
+    <p>Already have an account? <a href="login.html">Login</a></p>
+
+</body>
+
+</html>

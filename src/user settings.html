@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Settings</title>
+</head>
+<body>
+    <head>
+        <a href="#" title="Home"><img src="images/graduation hat.png" width="20px"></a>
+        <h1>SETTINGS</h1>
+        <div>
+            <div>
+                <img src="images/user.png" alt="profile image">
+                <p>Abebe Kebede</p>
+                <img src="images/downward arrow.png" alt="more options">
+            </div>
+            <div><a href="user settings.html">Settings</a></div>
+            <div><a href="index.html">Sign out</a></div>
+        </div>
+    </head>
+    <section>
+        <h2>profile</h2>
+        <a src="user.html"><img src="images/close.png" alt="close"></a>
+        <img src="images/user.png" alt="user profile picture">
+
+    </section>
+
+    <section>
+        <h2>Change Password</h2>
+        <form>
+            <div>
+                <label for="oldPassword">Old Password : </label>
+                <input type="password" id="oldPassword" required>
+            </div>
+            <div>
+                <label for="newPassword">New Password : </label>
+                <input type="password" id="newPassword" required>
+            </div>
+            <div>
+                <label for="confirmPassword">Oonfirm Password : </label>
+                <input type="password" id="confirmPpassword" required>
+            </div>
+            
+            <input type="submit" value="UPDATE PASSOWORD">
+        </form>
+    </section>
+    <hr>
+
+    <section>
+        <h2>Grading System</h2>
+        <table title="grading system">
+            <thead>
+                <tr>
+                    <th>Grade</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A+</td>
+                    <td><input type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td><input type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                    <td>A-</td>
+                    <td><input type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                    <td>B+</td>
+                    <td><input type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td><input type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                    <td>B-</td>
+                    <td><input type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                    <td>C+</td>
+                    <td><input type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td><input type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                    <td>C-</td>
+                    <td><input type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td><input type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td><input type="number" min="0" max="5"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <input type="submit" value="SAVE CHANGES">
+    </section>
+    
+
+</body>
+</html>
