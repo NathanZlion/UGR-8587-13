@@ -11,13 +11,16 @@
 <body>
 
     <head>
-        <a href="#" title="Home"><img src="images/graduation hat.png" ></a>
+        <a href="#" title="Home"><img src="images/graduation hat.png" >Grade Book</a>
         <h1>GRADEBOOK</h1>
         <div>
             <div>
                 <img src="images/user.png" alt="profile image">
                 <p>Abebe Kebede</p>
-                <img src="images/downward arrow.png" alt="more options">
+                <button>
+                    <img src="images/downward arrow.png" alt="more options">
+                </button>
+                    
             </div>
             <div><a href="user settings.html">Settings</a></div>
             <div><a href="index.html">Sign out</a></div>
@@ -48,12 +51,19 @@
             </div>
             <hr>
             <form method="" action="">
-                <label for="courseName">Course Name</label>
-                <label for="creditHours">Number of Credit hours</label>
-                <label for="grade">Grade</label>
-                <input type="text">
-                <input type="number">
-                <select name="grade" id="grade" value="-">
+                <div>
+                    <label for="courseName">Course Name</label>
+                    <input type="text" aria-label="courseName" id="courseName">
+                </div>
+                <div>
+                    <label for="creditHours">Number of Credit hours</label>
+                    <input type="number" aria-label="creditHours" id="creditHours">
+                </div>
+                <div>
+                    <label for="grade">Grade</label>
+                    <select name="grade" id="grade" value="-">
+                </div>
+
                     <option value="">-</option>
                     <option value="A+">A+</option>
                     <option value="A">A</option>
@@ -68,10 +78,10 @@
                     <option value="F">F</option>
                 </select>
                 
-                <input type="submit" value="ADD">
+                <input type="submit" value="ADD" aria-label="Add Grade">
             </form>
 
-            <table title="Subject List">
+            <table title="subjects List">
                 <thead>
                     <tr>
                         <th>No.</th>
@@ -108,7 +118,7 @@
     <footer>
         <div>
             <div>
-                <img src="images/graduation hat.png">
+                <img src="images/graduation hat.png" alt="Grade Book Logo">
                 <p>Grade Book</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem perferendis maiores nostrum
                     fugit debitis quaerat.</p>
