@@ -10,25 +10,28 @@
 
 <body>
     <nav>
-        <a href="index.html" title="Go Back"><img src="images/back-button.png" width="20px"></a>
+        <a href="index.html" title="Go Back"><img src="images/back-button.png" width="20px" alt="back"></a>
         <p>Step 1 of 2</p>
     </nav>
 
     <aside>
-        <img src="images/graduation hat.png">
+        <img src="images/graduation hat.png" alt="gradebook logo">
         <h1>WELCOME BACK TO GRADEBOOK !</h1>
     </aside>
     <form  method="post" action="#">
-        <h1>CREATE ACCOUNT</h1>
-        <label for="Name">Full Name :</label>
-        <input type="text" name="Name" id="Name" placeholder="abebe kebede" required>
-        <label for="email">Email :</label>
-        <input name="email" type="email" placeholder="Email Address" id="email" required>
-        <label for="password">Password :</label>
-        <input name="password" id="password" type="password" placeholder="********">
-        <input type="submit" value="NEXT">
-    </form>
+        <fieldset>
 
+            <legend>Create Account:</legend>
+            <label for="Name">Full Name :</label>
+            <input type="text" name="Name" id="Name" placeholder="abebe kebede" required>
+            <label for="email">Email :</label>
+            <input name="email" type="email" placeholder="Email Address" id="email" required>
+            <label for="password">Password :</label>
+            <input name="password" id="password" type="password" placeholder="********">
+        <input type="submit" value="NEXT" aria-label="Submit">
+    </fieldset>
+    </form>
+    
     <p>Already have an account? <a href="login.html">Login</a></p>
 
 </body>

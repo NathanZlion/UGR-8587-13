@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav>
-        <a href="#" title="Home"><img src="images/graduation hat.png" width="20px"></a>
+        <a href="#" title="Home"><img src="images/graduation hat.png" width="20px" alt="grade book logo"></a>
         <button href="index.html">Home</button>
         <button href="contact.html">Contact</button>
         <button href="about.html">About</button>
@@ -27,8 +27,8 @@
     </aside>
 
     <main>
-        <h1>WRITE US</h1>
         <form>
+            <legend>WRITE US</legend>
             <div>
                 <label for="name">Name : </label>
                 <input type="text" id="name" required>
@@ -38,10 +38,10 @@
                 <input type="email" placeholder="Email" id="email" required>
             </div>
             <div>
-                <label for="rememberMe">Message : </label>
-                <textarea ></textarea>
+                <label for="message">Message : </label>
+                <textarea id="message"></textarea>
             </div>
-            <input type="submit" value="SEND MESSAGE">
+            <input type="submit" value="SEND MESSAGE" aria-label="Submit">
         </form>
     </main>
 
@@ -49,7 +49,7 @@
     <footer>
         <div>
             <div>
-                <img src="images/graduation hat.png">
+                <img src="images/graduation hat.png" alt="grade book logo">
                 <p>Grade Book</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem perferendis maiores nostrum
                     fugit debitis quaerat.</p>

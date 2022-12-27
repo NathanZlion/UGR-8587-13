@@ -10,18 +10,20 @@
 
 <body>
     <nav>
-        <a href="signup-1.html" title="Go Back"><img src="images/back-button.png" width="20px"></a>
+        <a href="signup-1.html" title="Go Back"><img src="images/back-button.png" width="20px" alt="back"></a>
         <p>Step 2 of 2</p>
     </nav>
 
     <aside>
-        <img src="images/graduation hat.png">
+        <img src="images/graduation hat.png" alt="gradebook logo">
         <h1>WELCOME BACK TO GRADEBOOK !</h1>
     </aside>
     <form method="post" action="#">
-        <h1>CREATE ACCOUNT</h1>
-        <label for="universityName">University or College Name : </label>
-        <input type="text" name="Name" id="universityName" placeholder="Addis Ababa University" required>
+        <fieldset>
+            <legend>Create Account:</legend>
+
+            <label for="universityName">University or College Name : </label>
+            <input type="text" name="Name" id="universityName" placeholder="Addis Ababa University" required>
         <label for="numberOfYears">Years of Study :</label>
         <input name="numberOfYears" type="number" value="5" id="numberOfYears">
         <label for="studyLevel">Study Level : </label>
@@ -29,14 +31,15 @@
             <option value="highSchool">High School</option>
             <option value="underGraduate" selected>Under Graduate</option>
             <option value="postGraduate">Post Graduate</option>
-          </select>        
+        </select>        
         <p>Grading System</p>
         <input type="radio" id="gpa4.0" name="gpa" value="4.0" checked>
         <label for="gpa4.0">4.0</label>
         <input type="radio" id="gpa5.0" name="gpa" value="5.0">
         <label for="gpa5.0">5.0</label>
 
-        <input type="submit" value="CREATE ACCOUNT">
+        <input type="submit" value="CREATE ACCOUNT" aria-label="submit">
+    </fieldset>
     </form>
 
     <p>Already have an account? <a href="login.html">Login</a></p>

@@ -11,16 +11,16 @@
 <body>
 
     <head>
-        <a href="#" title="Home"><img src="images/graduation hat.png" >Grade Book</a>
+        <a href="#" title="Home"><img src="images/graduation hat.png" alt="grade book logo">Grade Book</a>
         <h1>GRADEBOOK</h1>
         <div>
             <div>
-                <img src="images/user.png" alt="profile image">
+                <img src="images/user.png" alt="profile img">
                 <p>Abebe Kebede</p>
                 <button>
                     <img src="images/downward arrow.png" alt="more options">
                 </button>
-                    
+
             </div>
             <div><a href="user settings.html">Settings</a></div>
             <div><a href="index.html">Sign out</a></div>
@@ -42,27 +42,30 @@
                 <button>Year 4</button>
                 <button>Year 5</button>
             </nav>
-            <div>
-                <p>Semester</p>
+            <fieldset>
+                <legend>Semester</legend>
                 <input name="semester" type="radio" id="semesterOne" value="semesterOne" checked>
                 <label for="semesterOne">One</label>
                 <input name="semester" type="radio" id="semesterTwo" value="semesterTwo">
                 <label for="semesterTwo">Two</label>
-            </div>
+            </fieldset>
             <hr>
             <form method="" action="">
-                <div>
-                    <label for="courseName">Course Name</label>
-                    <input type="text" aria-label="courseName" id="courseName">
-                </div>
-                <div>
-                    <label for="creditHours">Number of Credit hours</label>
-                    <input type="number" aria-label="creditHours" id="creditHours">
-                </div>
-                <div>
-                    <label for="grade">Grade</label>
-                    <select name="grade" id="grade" value="-">
-                </div>
+
+                <fieldset>
+                    <legend>Add Course</legend>
+                    <div>
+                        <label for="courseName">Course Name</label>
+                        <input type="text" aria-label="courseName" id="courseName">
+                    </div>
+                    <div>
+                        <label for="creditHours">Number of Credit hours</label>
+                        <input type="number" aria-label="creditHours" id="creditHours">
+                    </div>
+                    <div>
+                        <label for="grade">Grade</label>
+                        <select name="grade" id="grade" value="-">
+                    </div>
 
                     <option value="">-</option>
                     <option value="A+">A+</option>
@@ -76,9 +79,10 @@
                     <option value="C-">C-</option>
                     <option value="D">D</option>
                     <option value="F">F</option>
-                </select>
-                
-                <input type="submit" value="ADD" aria-label="Add Grade">
+                    </select>
+
+                    <input type="submit" value="ADD" aria-label="Add Grade">
+                </fieldset>
             </form>
 
             <table title="subjects List">
@@ -88,7 +92,7 @@
                         <th>Subject</th>
                         <th>Credits</th>
                         <th>Grade</th>
-                        
+
                     </tr>
                 </thead>
                 <tbody>
