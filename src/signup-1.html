@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/website-icon.png">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/style_forms.css" rel="stylesheet" type="text/css">
+    <link href="styles/style_signup.css" rel="stylesheet" type="text/css">
+    <title>Gradebook/Signup_1</title>
+</head>
+
+<body>
+    <div class="page">
+        <nav class="top-nav">
+            <a href="index.html" title="Go Back"><img src="images/back-button.png" width="20px" alt="back"></a>
+            <p class="text--centered title--medium">Step 1 of 2</p>
+        </nav>
+
+        <div class="gap-0 grid grid--responsive-half">
+
+            <aside class="grid__item banner">
+                <img class="banner__logo" src="images/gradulation-hat.png" alt="gradebook logo">
+                <h1 class="banner__title title--paragraph">WELCOME TO GRADEBOOK</h1>
+            </aside>
+
+            <main class="grid__item">
+                <form id="form" method="" action="signup-2.html">
+
+                    <fieldset>
+                        <legend class="title--big">Create Account:</legend>
+
+                        <!-- name -->
+                        <div class="grid grid--col-2">
+                            <label class="grid__item" for="name">Full Name :</label>
+                            <input id="name" type="text" placeholder="Enter your full name">
+                        </div>
+
+                        <!-- name_error -->
+                        <div class="error" id="name_error"></div>
+
+                        <!-- email -->
+                        <div class="grid grid--col-2">
+                            <label class="grid__item" for="email">Email :</label>
+                            <input id="email" name="email" type="text" placeholder="Enter your email address">
+                        </div>
+
+                        <!-- email_error -->
+                        <div class="error" id="email_error"></div>
+
+                        <!-- password -->
+                        <div class="grid grid--col-2">
+                            <label class="grid__item" for="password">Password :</label>
+                            <input id="password" name="password" type="password" placeholder="********">
+                        </div>
+
+                        <!-- password_error -->
+                        <div class="error" id="password_error"></div>
+
+                        <div>
+                            <input class="button button--primary width--fitcontent text--centered" type="submit"
+                                value="NEXT" aria-label="Submit">
+                        </div>
+
+                        <p class="text--centered">Already have an account? <a href="login.html">Login</a></p>
+                    </fieldset>
+                </form>
+            </main>
+        </div>
+    </div>
+
+    <script src="script/signup_1_Form-Validator.js" defer></script>
+
+</body>
+
+</html>

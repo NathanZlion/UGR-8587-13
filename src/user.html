@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/website-icon.png">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/style_user.css" rel="stylesheet" type="text/css">
+    <title>User-Page</title>
+</head>
+
+<body>
+    <header class="header navbar">
+        <a href="#" class="active nav-branding" title="Home"><img class="header__logo" src="images/gradulation-hat.png"
+                alt="grade book logo"></a>
+        <h1 class="active title title--big">GRADEBOOK</h1>
+        <div class="user grid grid-column nav-menu">
+            <div class="grid__item user__info" onclick="dropdown()">
+                <img class="logo" src="images/user.png" alt="profile img">
+                <p class="user__info-name grid__item-username">Abebe Kebede</p>
+                <img class="dropdown-button" src="images/downward arrow.png" alt="more options">
+            </div>
+            <div class="link grid__item grid__item-settings display--none user_nav-menu"><a
+                    href="user settings.html">Settings<img class="logo" src="images/settings.png"
+                        alt="go to settings"></a></div>
+            <div class="link grid__item grid__item-signout display--none user_nav-menu"><a href="index.html">Sign out
+                    <img class="logo" src="images/logout.png" alt="signout"></a></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="grid grid--responsive-half" onclick="dropdownRemove()">
+            <div class="cgpa">
+                <h2 class="title title--big">CGPA</h2>
+                <p class="title title--paragraph" id="cgpa">4</p>
+            </div>
+
+            <!-- Use Javascript to make these functional -->
+            <div class="grid grid--auto">
+                <nav class="grid grid--col-6">
+                    <button class="selected button button--primary year"
+                        onclick="toggleYearSelection(this)">All</button>
+                    <button class="button button--primary year" onclick="toggleYearSelection(this)">Year 1</button>
+                    <button class="button button--primary year" onclick="toggleYearSelection(this)">Year 2</button>
+                    <button class="button button--primary year" onclick="toggleYearSelection(this)">Year 3</button>
+                    <button class="button button--primary year" onclick="toggleYearSelection(this)">Year 4</button>
+                    <button class="button button--primary year" onclick="toggleYearSelection(this)">Year 5</button>
+                </nav>
+                <fieldset class="flex flex-row">
+                    <legend class="title--medium">Semester</legend>
+                    <div>
+                        <div>
+                            <input name="semester" type="radio" id="semesterOne" value="semesterOne" checked>
+                            <label for="semesterOne">One</label>
+                        </div>
+                        <div>
+                            <input name="semester" type="radio" id="semesterTwo" value="semesterTwo">
+                            <label for="semesterTwo">Two</label>
+                        </div>
+                    </div>
+                    <div>
+                        <p>GPA</p>
+                        <p id="gpa">4</p>
+                    </div>
+                </fieldset>
+
+                <form method="" action="">
+
+                    <fieldset>
+
+                        <legend class="title--medium">Add Course</legend>
+
+                        <div class="flex flex--wrap-row">
+
+                            <div class="flex__item grid grid-vertical">
+                                <label for="courseName">Course Name</label>
+                                <input class="newCourseName" type="text" aria-label="courseName" id="courseName">
+
+                                <!-- name_error -->
+                                <div id="name_error" class="error"></div>
+
+                            </div>
+
+                            <div class="flex__item grid grid-vertical">
+                                <label for="creditHours"># of Credits</label>
+                                <input class="newCreditHours" type="number" min="1" max="10" aria-label="creditHours"
+                                    id="creditHours">
+
+                                <!-- course error -->
+                                <div id="credit_error" class="error"></div>
+
+                            </div>
+
+                            <div class="flex__item grid grid-vertical">
+                                <label for="grade">Grade</label>
+                                <select class="newGrade" name="grade" id="grade" value="-">
+                                    <option class="null" value=""></option>
+                                    <option value="A+">A+</option>
+                                    <option value="A">A</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B">B</option>
+                                    <option value="B-">B-</option>
+                                    <option value="C+">C+</option>
+                                    <option value="C">C</option>
+                                    <option value="C-">C-</option>
+                                    <option value="D">D</option>
+                                    <option value="F">F</option>
+                                </select>
+
+                                <!-- grade error -->
+                                <div id="grade_error" class="error"></div>
+                            </div>
+                            <div class="grid grid-vertical">
+                                <div></div>
+                                <input class="add-grade_button button button--primary " value="ADD"
+                                    aria-label="Add Grade">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+                <audio src="audio/meditation music.mp3"></audio>
+                
+                <table id="grade_display" title="subjects list">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Subject</th>
+                            <th>Credits</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <div>
+            <label for="music"> Calming chimes </label>
+
+            <audio id="music" class="text--centered" controls>
+                <source src="audio/meditation music.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+                <track src="audio/audio_transcription.vtt" kind="captions"
+                label="Audio transcription" />
+            </audio>
+        </div>
+    </div>
+
+    <footer class="footer footer--flex position-relative">
+        <div class="brand">
+            <img src="images/gradulation-hat.png" alt="Grade Book Logo" class="brand__logo">
+            <div class="brand__name">GRADE BOOK</div>
+            <div class="brand__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem
+                perferendis maiores nostrum
+                fugit debitis quaerat.</div>
+        </div>
+        <div class="grid grid--col-2 grid--justify-spacearound">
+            <div class="grid__item inline--centered">
+                <legend>SITE MAP</legend>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+
+            <div class="grid__item inline--centered">
+                <ul>
+                    <legend>CONTACT</legend>
+                    <li><a href="github.com">Github</a></li>
+                    <li><a href="twitter.com">Twitter</a></li>
+                    <li><a href="youtube.com">Youtube</a></li>
+                    <li><a href="facebook.com">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="position-absolute inline--centered copyrightnotice text-muted"> &copy;2022 Grade Book. All right
+            reserved.</div>
+    </footer>
+
+    <script defer src="script/responsiveUserNavbar.js"></script>
+    <script defer src="script/grade_handler.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/website-icon.png">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/style_index.css" rel="stylesheet" type="text/css">
+    <link href="styles/responsiveNavbar.css" rel="stylesheet" type="text/css">
+    <title>Home</title>
+</head>
+
+<body>
+    <header class="header navbar">
+        <a href="index.html" class="active nav-branding" id="logo" title="Home"><img src="images/gradulation-hat.png"
+                class="header__logo" alt="gradebook_logo"><span class="display--none">_</span></a>
+
+        <nav class="nav nav-menu">
+            <a href="index.html" class="button nav-item nav-link nav__button">Home</a>
+            <a href="contact.html" class="button nav-item nav-link nav__button">Contact</a>
+            <a href="about.html" class="button nav-item nav-link nav__button">About</a>
+            <a href="login.html" class="button nav-item nav-link nav__button">Login</a>
+        </nav>
+
+        <div href="_" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+    </header>
+
+    <!-- the fullscreen welcome page -->
+    <main class="main main--fullscreen-true">
+        <h1 class="main__header">WELCOME TO GRADE BOOK</h1>
+
+        <div  class="button button--primary main__button">
+            <a href="signup-1.html">GET STARTED</a>
+
+        </div>
+
+        <div id="scroll" class="main__button--centered">
+            <div class="button__icon--centered button--bottom-0" title="learn more">
+                <img src="images/downward arrow.png" alt="Learn More">
+            </div>
+        </div>
+    </main>
+    <div class="container">
+
+
+        <section id="section_1" class="section grid grid--responsive-2">
+            <img class="grid__item grid__item--image" src="images/happy student.png" alt="an excited undergrad student">
+            <div class="grid__item sectiontext">
+                <h2 class="sectiontext__topic">TRACK ALL YOUR GRADES IN ONE PLACE</h2>
+                <ul class="sectiontext__list inline--centered ">
+                    <li>Say goodbye to messy notebooks and lost grade sheets.</li>
+                    <li> Keep track of all your grades in one place with Grader</li>
+                    <li>Easily calculate your GPA and track your academic progress with Grader's user-friendly
+                        interface.</li>
+                    <li>Grader is a safe and secure platform to store your personal and academic data, accessible
+                        wherever you are.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section grid grid--responsive-2">
+            <div class="grid__item sectiontext">
+                <h2 class="sectiontext__topic">PERFECT TOOL FOR STUDENTS WHO WANT TO STAY ON TOP OF THEIR GRADES</h2>
+                <ul class="sectiontext__list inline--centered ">
+                    <li>Keep your personal and academic life organized with Grader's integration with your calendar and
+                        schedule</li>
+                    <li>Convenience and ease of access</li>
+                </ul>
+            </div>
+            <img class="grid__item grid__item--image" src="images/excited student.png"
+                alt="an excited highschool student">
+        </section>
+
+        <hr>
+        <section class="grid grid--vertical">
+            <a class="button button--primary inline--centered" href="signup-1.html">GET STARTED</a>
+            <p class="inline--centered">Already have an Account?</p>
+            <a class="button inline--centered " href="login.html">Login</a>
+        </section>
+        <hr>
+    </div>
+
+    <footer class="footer footer--flex position-relative">
+        <div class="brand">
+            <img src="images/gradulation-hat.png" alt="Grade Book Logo" class="brand__logo">
+            <div class="brand__name">GRADE BOOK</div>
+            <div class="brand__description">Grades Soaring, Effortlessly Achieved!</div>
+        </div>
+        <div class="grid grid--col-2 grid--justify-spacearound">
+            <div class="grid__item inline--centered">
+                <legend>SITE MAP</legend>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+
+            <div class="grid__item inline--centered">
+                <ul>
+                    <legend>CONTACT</legend>
+                    <li class="link"><a href="github.com">Github</a></li>
+                    <li class="link"><a href="twitter.com">Twitter</a></li>
+                    <li class="link"><a href="youtube.com">Youtube</a></li>
+                    <li class="link"><a href="facebook.com">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="position-absolute inline--centered copyrightnotice text-muted"> &copy;2022 Grade Book. All
+            right reserved.</div>
+    </footer>
+
+    <script src="script/responsiveNavbar.js"></script>
+    <script>
+        let button = document.getElementById("scroll");
+        var section = document.getElementById("section_1");
+        button.addEventListener("click", function () {
+            section.scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+</body>
+
+</html>

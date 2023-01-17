@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/website-icon.png">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/responsiveNavbar.css" rel="stylesheet" type="text/css">
+    <link href="styles/style_index.css" rel="stylesheet" type="text/css">
+    <link href="styles/style_about.css" rel="stylesheet" type="text/css">
+    <title>ABOUT</title>
+</head>
+
+<body>
+
+    <header class="header navbar">
+        <a href="index.html" class="active nav-branding" id="logo" title="Home"><img src="images/gradulation-hat.png"
+                class="header__logo" alt="gradebook logo"></a>
+
+        <nav class="nav nav-menu">
+            <a href="index.html" class="button nav-item nav-link nav__button">Home</a>
+            <a href="contact.html" class="button nav-item nav-link nav__button">Contact</a>
+            <a href="about.html" class="button nav-item nav-link nav__button">About</a>
+            <a href="login.html" class="button nav-item nav-link nav__button">Login</a>
+        </nav>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <main class="main main--fullscreen-true ">
+        <h1 class="main__header color-blue">ABOUT GRADE BOOK</h1>
+        <a id="scroll" class="main__button--centered">
+            <div class="button__icon--centered button--bottom-0" title="learn more">
+                <img src="images/downward arrow.png" alt="Learn More">
+            </div>
+        </a>
+    </main>
+    <div id="section_1" class="container">
+
+        <section class="card-group">
+            <div class="card">
+                <h2 class="card__title">Track Your Grades</h2>
+                <img class="card__image" src="images/gradebook.png" alt="book with Grade book written on it">
+                <p class="card__paragraph">Easily keep track of all your grades in one place with our 
+                    user-friendly interface. You can add, edit, and delete grades for different subjects,
+                     and view your overall academic progress over time.</p>
+            </div>
+
+            <div class="card">
+                <h2 class="card__title">Calculate Your GPA.</h2>
+                <img class="card__image" src="images/gradebook.png" alt="book with Grade book written on it">
+                <p class="card__paragraph">Our GPA calculator allows you to quickly and accurately calculate your 
+                    grade point average and CGPA. You can also view your grades in a graph format to track your progress
+                     and identify areas for improvement.</p>
+            </div>
+
+            <div class="card">
+                <h2 class="card__title">Create Customized Study Plans</h2>
+                <img class="card__image" src="images/gradebook.png" alt="book with Grade book written on it">
+                <p class="card__paragraph">Easily create personalized study plans that fit your schedule and 
+                    learning style. Our platform allows you to add flashcards, notes, and reminders for exams and assignments,
+                     so you can stay on top of your academic commitments..</p>
+            </div>
+        </section>
+
+        <section class="container section">
+            <h2 class="section__title">HOW TO USE</h2>
+            <div class="grid grid--responsive">
+                <video class="grid__item" id="video" controls="controls" width="400px" preload="metadata">
+                    <source src="video/Change Your Life – One Tiny Step at a Time.mp4" type="video/mp4" />
+                    <track label="English-vtt" kind="captions" srclang="en"
+                        src="video/video_transcription.vtt" default />
+                </video>
+<!-- 
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    <track kind="captions" src="transcription.vtt" label="English Captions" srclang="en">
+                </video>
+                 -->
+
+                <ul class="grid__item sectiontext__list" >
+                    <li>Learn how to create an account and log in to the website.</li>
+                    <li>Understand how to add, edit and delete grades from different subjects.</li>
+                    <li>Calculate your GPA and CGPA with our easy to use calculator.</li>
+                    <li>Create personalized study plans and flashcards for your exams.</li>
+                    <li>Set reminders for assignments, exams, and deadlines to stay on top of your academic schedule.
+                    </li>
+                    <li>Track your academic progress over time and see where you can improve.</li>
+                </ul>
+
+            </div>
+        </section>
+        <hr>
+        <section class="grid grid--vertical">
+            <a class="button button--primary inline--centered" href="signup-1.html">GET STARTED</a>
+            <p class="inline--centered">Already have an Account?</p>
+            <a class="button inline--centered " href="login.html">Login</a>
+        </section>
+        <hr>
+    </div>
+
+
+
+    <footer class="footer footer--flex position-relative">
+        <div class="brand">
+            <img src="images/gradulation-hat.png" alt="Grade Book Logo" class="brand__logo">
+            <div class="brand__name">GRADE BOOK</div>
+            <div class="brand__description">Grades Soaring, Effortlessly Achieved!</div>
+        </div>
+        <div class="grid grid--col-2 grid--justify-spacearound">
+            <div class="grid__item inline--centered">
+                <legend>SITE MAP</legend>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+
+            <div class="grid__item inline--centered">
+                <ul>
+                    <legend>CONTACT</legend>
+                    <li><a href="github.com">Github</a></li>
+                    <li><a href="twitter.com">Twitter</a></li>
+                    <li><a href="youtube.com">Youtube</a></li>
+                    <li><a href="facebook.com">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="position-absolute inline--centered copyrightnotice text-muted"> &copy;2022 Grade Book. All
+            right reserved.</div>
+    </footer>
+
+    <script src="script/responsiveNavbar.js"></script>
+    <script src="script/responsiveNavbar.js"></script>
+    <script>
+        let button = document.getElementById("scroll");
+        var section = document.getElementById("section_1");
+        button.addEventListener("click", function () {
+            section.scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+</body>
+
+</html>

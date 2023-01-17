@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/website-icon.png">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/style_user.css" rel="stylesheet" type="text/css">
+    <link href="styles/style_user_setting.css" rel="stylesheet" type="text/css">
+    <title>User-Settings</title>
+</head>
+
+<body>
+    <header class="header navbar">
+        <a href="#" class="active nav-branding" title="Home"><img class="header__logo" src="images/gradulation-hat.png"
+                alt="grade book logo"></a>
+        <h1 class="active title title--big">Settings</h1>
+        <div class="user grid grid-column nav-menu">
+            <div class="grid__item user__info" onclick="dropdown()">
+                <img class="logo" src="images/user.png" alt="profile img">
+                <p class="user__info-name grid__item-username">Abebe Kebede</p>
+                <img class="dropdown-button" src="images/downward arrow.png" alt="more options">
+            </div>
+            <!-- <div class="link grid__item grid__item-settings display--none"><a href="user settings.html">Settings</a></div> -->
+            <div class="link grid__item grid__item-settings display--none user_nav-menu"><a href="user.html"> Grades</a>
+            </div>
+            <div class="link grid__item grid__item-signout display--none user_nav-menu"><a href="index.html">Sign
+                    out</a></div>
+        </div>
+    </header>
+
+    <div class="container" onclick="dropdownRemove()">
+
+        <div id="success-message" class="hidden">SUCCESSFULLY UPDATED</div>
+        <h2 class="topic">Profile</h2>
+        <section class="grid">
+
+            <!-- profile error message -->
+            <div id="profile-error" class="error"></div>
+
+            <div class="align--center">
+                <div class="grid grid--col-2">
+                    <label class="grid__item" for="Name">Full Name :</label>
+                    <input type="text" name="Name" id="Name" placeholder="abebe kebede">
+                </div>
+                <div class="grid grid--col-2">
+                    <label class="grid__item" for="email">Email :</label>
+                    <input name="email" type="email" placeholder="Email Address" id="email">
+                </div>
+                <div>
+                    <input id="submit-profile-change" class="button button--secondary align--right" type="submit"
+                        value="UPDATE PROFILE" aria-label="save profile changes">
+                </div>
+            </div>
+        </section>
+
+        <section class="position--relative">
+            <div class="topic">Change Password</div>
+
+            <!-- passsword error message -->
+            <div id="password-error" class="error"></div>
+
+            <form class="align--center" method="post" action="#">
+                <fieldset>
+                    <div class="grid grid--col-2">
+                        <label class="grid__item" for="oldPassword">Old Password : </label>
+                        <input type="password" id="oldPassword" placeholder="********" aria-label="old password" value="">
+                    </div>
+                    <div class="grid grid--col-2">
+                        <label class="grid__item" for="newPassword">New Password :</label>
+                        <input type="password" id="newPassword" placeholder="********" aria-label="new password" value="">
+                    </div>
+                    <div class="grid grid--col-2">
+                        <label class="grid__item" for="confirmPassword">Confirm Password : </label>
+                        <input type="password" id="confirmPassword" placeholder="********"aria-label="confirm password"value="">
+                    </div>
+
+                    <input id="submit-password-change" class="button button--secondary align--right" 
+                        value="UPDATE PASSWORD" aria-label="save password changes">
+                </fieldset>
+            </form>
+        </section>
+        <hr>
+
+        <section class="position--relative">
+            <div class="topic">Grading System</div>
+            <div class="align--center">
+
+            <!-- profile error message -->
+            <div id="grading-error" class="error"></div>
+            
+                <table title="Set_grading_system">
+                    <thead>
+                        <tr>
+                            <th>Grade</th>
+                            <th>GPA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A<sup>+</sup></td>
+                            <td><input type="number" aria-label="grade equal or above" value="4"></td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td><input type="number" aria-label="grade equal or above" value="4"></td>
+                        </tr>
+                        <tr>
+                            <td>A<sup>-</sup></td>
+                            <td><input type="number" aria-label="grade equal or above" value="4"></td>
+                        </tr>
+                        <tr>
+                            <td>B<sup>+</sup></td>
+                            <td><input type="number" aria-label="grade equal or above" value="3.75">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td><input type="number" aria-label="grade equal or above" value="3.5"></td>
+                        </tr>
+                        <tr>
+                            <td>B-</td>
+                            <td><input type="number" aria-label="grade equal or above" value="3.25">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C<sup>+</sup></td>
+                            <td><input type="number" aria-label="grade equal or above" value="3"></td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td><input type="number" aria-label="grade equal or above" value="2.75">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C<sup>-</sup></td>
+                            <td><input type="number" aria-label="grade equal or above" value="2"></td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td><input type="number" aria-label="grade equal or above" value="1.75">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td><input type="number" aria-label="grade equal or above" value="1.5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input id="submit-grading-change" class="button button--secondary align--right" type="submit"
+                    value="SAVE CHANGES" aria-label="save grading system changes">
+            </div>
+
+        </section>
+    </div>
+
+    <script defer src="script/responsiveUserNavbar.js"></script>
+    <script defer src="script/settingsValidator.js"></script>
+</body>
+
+</html>

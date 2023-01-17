@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/website-icon.png">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/style_contact.css" type="text/css">
+    <link href="styles/responsiveNavbar.css" rel="stylesheet" type="text/css">
+    <title>Contact</title>
+</head>
+
+<body>
+    <header class="header navbar">
+        <a href="index.html" id="logo" title="Home"><img src="images/gradulation-hat.png" class="header__logo"
+                alt="Gradebook logo"></a>
+        <nav class="nav nav-menu">
+            <a href="index.html" class="button nav-item nav-link nav__button">Home</a>
+            <a href="contact.html" class="button nav-item nav-link nav__button">Contact</a>
+            <a href="about.html" class="button nav-item nav-link nav__button">About</a>
+            <a href="login.html" class="button nav-item nav-link nav__button">Login</a>
+        </nav>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+    </header>
+    <div class="grid grid--responsive">
+        <aside class="grid__item">
+            <h1 class="title--big title--boxed">CONTACT INFO</h1>
+            <ul class="sidebar__item">
+                <li class="text--centered">
+                    <a href="tel: 0911223344"><img class="icon" src="images/telephone.png" alt="call us">
+                        0911223344</a>
+                </li>
+                <li class="text--centered">
+                    <a href="mailto:example@gmail.com"><img class="icon" src="images/mail.png" alt="mail us">
+                        example@gmail.com</a>
+                </li>
+
+                <li class="text--centered socialmedia sidebar__item ">
+                    <a class="socialmedia__icon" href="#"><img src="images/twitter-sign.png" alt="twitter"></a>
+                    <a class="socialmedia__icon" href="#"><img src="images/facebook-sign.png" alt="facebook"></a>
+                    <a class="socialmedia__icon" href="#"><img src="images/linkedin-sign.png" alt="linked in"></a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="grid__item">
+            <main>
+                <form id="form" class="form" method="" action="">
+                    <legend class="title--big title--boxed">WRITE US</legend>
+
+                    <!-- name -->
+                    <div class="grid grid--col-2">
+                        <label class="grid__item text--centered" for="name">Full Name :</label>
+                        <input id="name" type="text" placeholder="Enter your full name">
+                    </div>
+                    <!-- name error message -->
+                    <div id="name-error" class="error"></div>
+
+
+                    <!-- email -->
+                    <div class="grid grid--col-2">
+                        <label class="grid__item text--centered" for="email">Email :</label>
+                        <input id="email" name="email" type="text" placeholder="Enter your email address">
+                    </div>
+                    <!-- email error message -->
+                    <div id="email-error" class="error"></div>
+
+
+                    <!-- message -->
+                    <div class="grid grid--col-2">
+                        <label class="grid__item text--centered" for="message" style="vertical-align: top;">Message :
+                        </label>
+                        <textarea class="grid__item--input textarea" aria-placeholder="Enter your message or question"
+                            id="message"></textarea>
+                    </div>
+                    <!-- name error message -->
+                    <div id="message-error" class="error"></div>
+
+                    <input class="form__item button button--primary form__item--submit" type="submit" value="SEND MESSAGE" aria-label="Submit">
+                </form>
+            </main>
+        </div>
+    </div>
+
+
+    <footer class="footer footer--flex position-relative">
+        <div class="brand">
+            <img src="images/gradulation-hat.png" alt="Grade Book Logo" class="brand__logo">
+            <div class="brand__name">GRADE BOOK</div>
+            <div class="brand__description">Grades Soaring, Effortlessly Achieved!</div>
+        </div>
+        <div class="grid grid--col-2 grid--justify-spacearound">
+            <div class="grid__item inline--centered">
+                <legend>SITE MAP</legend>
+                <ul>
+                    <li><a href="index.html" title="home page">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+
+            <div class="grid__item inline--centered">
+                <ul>
+                    <legend>CONTACT</legend>
+                    <li><a href="github.com">Github</a></li>
+                    <li><a href="twitter.com">Twitter</a></li>
+                    <li><a href="youtube.com">Youtube</a></li>
+                    <li><a href="facebook.com">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="position-absolute inline--centered copyrightnotice text-muted"> &copy;2022 Grade Book. All
+            right reserved.</div>
+    </footer>
+
+    <script src="script/responsiveNavbar.js" defer></script>
+    <script src="script/contactpageFormValidator.js"></script>
+
+</body>
+
+</html>
