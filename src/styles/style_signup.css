@@ -1,0 +1,50 @@
+
+
+
+:root {
+  --primary-bg-color: #f1f1f1;
+  --secondary-bg-color: #5a5a5a;
+  --tertiary-bg-color: #262e57;
+  --quaternary-bg-color: #f9f9f9;
+
+  --primary-text-color: #101010;
+  --secondary-text-color: #1b1b1b;
+  --tertiary-text-color: #353535;
+  --quaternary-text-color: #ffffff;
+
+  --border-color: #000000;
+  --brand--color: #cc4700;
+}
+fieldset {
+  text-align: center;
+  padding: 1em;
+  display: grid;
+  gap: 1em;
+}
+
+form {
+  min-height: fit-content;
+  text-align: center;
+  height: 200px;
+  margin: 2em auto auto auto;
+}
+
+.grid--responsive-half {
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+}
+
+.banner {
+  order: 1;
+}
+
+main {
+  order: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .grid--responsive-half {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
