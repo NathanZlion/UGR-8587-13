@@ -7,13 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/website-icon.png">
     <!-- bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+
+    <!-- alternative offline bootstrap -->
+    <link href="styles/Bootstrap/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
+
     <link href="styles/style.css" rel="stylesheet">
     <style>
-        * {
+        /* * {
             outline: 1px solid red;
-        }
+        } */
     </style>
     <title>Home</title>
 </head>
@@ -33,26 +37,27 @@
             <ul class="collapse navbar-collapse navbar-nav mb-2 mb-lg-0 justify-content-center gap-5 "
                 id="navbarSupportedContent">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active btn btn-outline-secondary" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link btn btn-outline-secondary" href="#">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link btn btn-outline-secondary" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link btn btn-outline-secondary" href="#">Login</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- the fullscreen welcome page -->
-    <main id="height--fullheight" class="d-grid gap-5 intro border container justify-content-center align-content-center">
+    <main id="height--fullheight"
+        class="d-grid gap-5 intro border container justify-content-center align-content-center">
         <h1 class="display-1 w-100 text-center">WELCOME TO GRADE&nbsp;BOOK</h1>
 
-        <a class="intro__button btn btn-primary btn-lg rounded me-auto ms-auto" href="signup-1.html">GET STARTED</a>
+        <a class="btn btn-primary btn-lg rounded me-auto ms-auto" href="signup-1.html">GET STARTED</a>
 
         <!-- scroll down button -->
         <div id="scroll" class="btn-outline-primary">
@@ -66,7 +71,8 @@
     <div class="container mt-5">
 
         <section id="section_1" class="row mb-5 align-items-center">
-            <img class="col-lg-5 rounded order-2 order-lg-1" src="images/happy student.png" alt="an excited undergrad student">
+            <img class="col-lg-5 rounded order-2 order-lg-1" src="images/happy student.png"
+                alt="an excited undergrad student">
             <div class="col-lg-7 order-1 order-lg-2 w-md-50">
                 <h2 class="lead text-decoration-underline text-center">TRACK ALL YOUR GRADES IN ONE PLACE</h2>
                 <ul class="">
@@ -84,7 +90,8 @@
             <img class="col-lg-5 order-2 order-lg-2 rounded" src="images/excited student.png"
                 alt="an excited highschool student">
             <div class="col-lg-7 order-1 order-lg-1">
-                <h2 class="lead text-decoration-underline text-center">PERFECT TOOL FOR STUDENTS WHO WANT TO STAY ON TOP OF THEIR GRADES</h2>
+                <h2 class="lead text-decoration-underline text-center">PERFECT TOOL FOR STUDENTS WHO WANT TO STAY ON TOP
+                    OF THEIR GRADES</h2>
                 <ul class="">
                     <li>Keep your personal and academic life organized with Grader's integration with your calendar and
                         schedule</li>
@@ -94,22 +101,22 @@
         </section>
 
         <hr>
-        <section class="d-flex">
-            <a class="btn btn-outline-primary" href="signup-1.html">GET STARTED</a>
-            <p class="inline--centered">Already have an Account?</p>
-            <a class="button inline--centered " href="login.html">Login</a>
+        <section class="d-grid">
+            <a class="btn btn-outline-primary " href="signup-1.html">GET STARTED</a>
+            <p class="">Already have an Account?</p>
+            <a class="btn btn-primary " href="login.html">Login</a>
         </section>
         <hr>
     </div>
 
-    <footer class="footer footer--flex position-relative">
-        <div class="brand">
-            <img src="images/gradulation-hat.png" alt="Grade Book Logo" class="brand__logo">
-            <div class="brand__name">GRADE BOOK</div>
-            <div class="brand__description">Grades Soaring, Effortlessly Achieved!</div>
+    <footer class="">
+        <div class="">
+            <img src="images/gradulation-hat.png" alt="Grade Book Logo" class="">
+            <div class="">GRADE BOOK</div>
+            <div class="">Grades Soaring, Effortlessly Achieved!</div>
         </div>
-        <div class="grid grid--col-2 grid--justify-spacearound">
-            <div class="grid__item inline--centered">
+        <div class="">
+            <div class="">
                 <legend>SITE MAP</legend>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -118,7 +125,7 @@
                 </ul>
             </div>
 
-            <div class="grid__item inline--centered">
+            <div class="">
                 <ul>
                     <legend>CONTACT</legend>
                     <li class="link"><a href="github.com">Github</a></li>
@@ -132,18 +139,15 @@
             right reserved.</div>
     </footer>
 
+        <script>
+            let button = document.getElementById("scroll");
+            var section = document.getElementById("section_1");
+            button.addEventListener("click", function () {
+                section.scrollIntoView({ behavior: "smooth" });
+            });
+        </script>
 
-    <script>
-        let button = document.getElementById("scroll");
-        var section = document.getElementById("section_1");
-        button.addEventListener("click", function () {
-            section.scrollIntoView({ behavior: "smooth" });
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
 </body>
 
