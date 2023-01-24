@@ -11,21 +11,18 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="styles/style.css" rel="stylesheet">
     <style>
-        /* ul {
+        * {
             outline: 1px solid red;
-            
-            width: 100%;
-        } */
+        }
     </style>
     <title>Home</title>
 </head>
 
 <body>
 
-
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm bg-light">
-        <div class="container-fluid">
+        <div class="container-fluid bg-light">
             <img src="images/gradulation-hat.png" class="navbar-brand img-fluid me-5" alt="gradebook_logo" id="logo"
                 title="Home">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -33,7 +30,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="collapse navbar-collapse navbar-nav mb-2 mb-lg-0 justify-content-center gap-5 bg-light"
+            <ul class="collapse navbar-collapse navbar-nav mb-2 mb-lg-0 justify-content-center gap-5 "
                 id="navbarSupportedContent">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -52,27 +49,27 @@
     </nav>
 
     <!-- the fullscreen welcome page -->
-    <main id="height--fullheight" class="border container justify-content-center">
-        <h1 class="display-1">WELCOME TO GRADE BOOK</h1>
+    <main id="height--fullheight" class="d-grid gap-5 intro border container justify-content-center align-content-center">
+        <h1 class="display-1 w-100 text-center">WELCOME TO GRADE&nbsp;BOOK</h1>
 
-        <a class="btn btn-primary " href="signup-1.html">GET STARTED</a>
-
+        <a class="intro__button btn btn-primary btn-lg rounded me-auto ms-auto" href="signup-1.html">GET STARTED</a>
 
         <!-- scroll down button -->
-        <div id="scroll" class="main__button--centered">
-            <div class="button__icon--centered button--bottom-0" title="learn more">
-                <img src="images/downward arrow.png" alt="Learn More">
+        <div id="scroll" class="btn-outline-primary">
+            <div class="btn btn-outline-primary rounded-pill p-2 h-5 w-5" title="learn more">
+                <img src="images/downward arrow.png" class="img-fluid" alt="Learn More">
             </div>
         </div>
     </main>
-    <div class="container">
 
 
-        <section id="section_1" class="section grid grid--responsive-2">
-            <img class="grid__item grid__item--image" src="images/happy student.png" alt="an excited undergrad student">
-            <div class="grid__item sectiontext">
-                <h2 class="sectiontext__topic">TRACK ALL YOUR GRADES IN ONE PLACE</h2>
-                <ul class="sectiontext__list inline--centered ">
+    <div class="container mt-5">
+
+        <section id="section_1" class="row mb-5 align-items-center">
+            <img class="col-lg-5 rounded order-2 order-lg-1" src="images/happy student.png" alt="an excited undergrad student">
+            <div class="col-lg-7 order-1 order-lg-2 w-md-50">
+                <h2 class="lead text-decoration-underline text-center">TRACK ALL YOUR GRADES IN ONE PLACE</h2>
+                <ul class="">
                     <li>Say goodbye to messy notebooks and lost grade sheets.</li>
                     <li> Keep track of all your grades in one place with Grader</li>
                     <li>Easily calculate your GPA and track your academic progress with Grader's user-friendly
@@ -83,22 +80,22 @@
             </div>
         </section>
 
-        <section class="section grid grid--responsive-2">
-            <div class="grid__item sectiontext">
-                <h2 class="sectiontext__topic">PERFECT TOOL FOR STUDENTS WHO WANT TO STAY ON TOP OF THEIR GRADES</h2>
-                <ul class="sectiontext__list inline--centered ">
+        <section class="row mb-5 align-items-center">
+            <img class="col-lg-5 order-2 order-lg-2 rounded" src="images/excited student.png"
+                alt="an excited highschool student">
+            <div class="col-lg-7 order-1 order-lg-1">
+                <h2 class="lead text-decoration-underline text-center">PERFECT TOOL FOR STUDENTS WHO WANT TO STAY ON TOP OF THEIR GRADES</h2>
+                <ul class="">
                     <li>Keep your personal and academic life organized with Grader's integration with your calendar and
                         schedule</li>
                     <li>Convenience and ease of access</li>
                 </ul>
             </div>
-            <img class="grid__item grid__item--image" src="images/excited student.png"
-                alt="an excited highschool student">
         </section>
 
         <hr>
-        <section class="grid grid--vertical">
-            <a class="button button--primary inline--centered" href="signup-1.html">GET STARTED</a>
+        <section class="d-flex">
+            <a class="btn btn-outline-primary" href="signup-1.html">GET STARTED</a>
             <p class="inline--centered">Already have an Account?</p>
             <a class="button inline--centered " href="login.html">Login</a>
         </section>
@@ -131,12 +128,18 @@
                 </ul>
             </div>
         </div>
-        <div class="position-absolute inline--centered copyrightnotice text-muted"> &copy;2022 Grade Book. All
+        <div class="text-center text-muted"> &copy;2022 Grade Book. All
             right reserved.</div>
     </footer>
 
-    
 
+    <script>
+        let button = document.getElementById("scroll");
+        var section = document.getElementById("section_1");
+        button.addEventListener("click", function () {
+            section.scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>

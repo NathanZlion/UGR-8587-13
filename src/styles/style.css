@@ -18,6 +18,12 @@
 
 #scroll {
   position: absolute;
-  bottom: 0;
+  bottom: -8%;
   left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+#scroll img {
+  height: 2rem;
+}
+
