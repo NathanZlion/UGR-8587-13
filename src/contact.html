@@ -6,30 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/website-icon.png">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="styles/style_contact.css" type="text/css">
-    <link href="styles/responsiveNavbar.css" rel="stylesheet" type="text/css">
     <title>Contact</title>
 </head>
 
 <body>
-    <header class="header navbar">
-        <a href="index.html" id="logo" title="Home"><img src="images/gradulation-hat.png" class="header__logo"
-                alt="Gradebook logo"></a>
-        <nav class="nav nav-menu">
-            <a href="index.html" class="button nav-item nav-link nav__button">Home</a>
-            <a href="contact.html" class="button nav-item nav-link nav__button">Contact</a>
-            <a href="about.html" class="button nav-item nav-link nav__button">About</a>
-            <a href="login.html" class="button nav-item nav-link nav__button">Login</a>
-        </nav>
 
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+    <!-- navbar -->
+    <nav class="navbar navbar-secondary navbar-expand-sm bg-secondary">
+        <div class="container-fluid border-bottom">
+            <img src="images/gradulation-hat.png" class="navbar-brand img-fluid ms-2 me-5" alt="gradebook_logo" id="logo"
+                title="Home">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="collapse navbar-collapse navbar-nav mb-2 mb-lg-0 justify-content-center gap-5 bg-secondary"
+                id="navbarSupportedContent">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-light px-3" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active btn btn-outline-light px-3" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-light px-3" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-light px-3" href="login.html">Login</a>
+                </li>
+            </ul>
         </div>
+    </nav>
 
-    </header>
     <div class="grid grid--responsive">
         <aside class="grid__item">
             <h1 class="title--big title--boxed">CONTACT INFO</h1>
@@ -84,7 +99,8 @@
                     <!-- name error message -->
                     <div id="message-error" class="error"></div>
 
-                    <input class="form__item button button--primary form__item--submit" type="submit" value="SEND MESSAGE" aria-label="Submit">
+                    <input class="form__item button button--primary form__item--submit" type="submit"
+                        value="SEND MESSAGE" aria-label="Submit">
                 </form>
             </main>
         </div>
@@ -124,6 +140,17 @@
     <script src="script/responsiveNavbar.js" defer></script>
     <script src="script/contactpageFormValidator.js"></script>
 
+    <script>
+        let button = document.getElementById("scroll");
+        var section = document.getElementById("section_1");
+        button.addEventListener("click", function () {
+            section.scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

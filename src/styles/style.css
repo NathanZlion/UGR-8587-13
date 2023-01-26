@@ -1,14 +1,15 @@
 /* Fonts*/
 /* normal Black */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap");
 
+/* index.html */
 .navbar {
   max-height: 4rem !important;
 }
 
 #logo {
-  height: 3rem;
+  height: 3.5rem;
+  width: 3rem;
 }
 
 #height--fullheight {
@@ -25,5 +26,14 @@
 
 #scroll img {
   height: 2rem;
+}
+
+.banner__img {
+  height: 8rem;
+  width: 10rem;
+}
+
+.navbar-collapse {
+  z-index: 3;
 }
 
