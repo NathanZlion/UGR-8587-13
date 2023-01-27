@@ -16,27 +16,29 @@
 </head>
 
 <body class="min-height-100">
+
     <!-- navbar -->
-    <nav class="navbar navbar-secondary navbar-expand-sm bg-secondary justify-items-top">
+    <nav class="navbar navbar-secondary navbar-expand-sm bg-primary justify-items-top ">
         <div class="container-fluid border-bottom">
             <img src="images/gradulation-hat.png" class="navbar-brand img-fluid ms-2 me-5" alt="gradebook_logo"
                 id="logo" title="Home">
 
-            <div class="display-5 ms-auto me-auto d-none d-lg-flex">Settings</div>
+            <div class="display-5 ms-auto me-auto d-none d-lg-flex text-light">Settings</div>
             <ul class="navbar me-2 mb-2 mb-lg-0 ">
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <img src="images/user.png" alt="profile">
                         Abebe Kebede
                     </button>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item">
-                            <a class="row p-2" href="user.html">
-                                <div class="col-7">Grades</div>
-                                <img class="img-fluid col-4" src="images/home.png" alt="">
-                            </a>
-                        </li>
+                            <li class="dropdown-item">
+                                <a class="row p-2" href="user.html">
+                                    <div class="col-7">Grades</div>
+                                    <img class="img-fluid col-4" src="images/home.png" alt="">
+                                </a>
+                            </li>
                         <li>
                             <hr class="dropdown-divider bg-light">
                         </li>
@@ -52,12 +54,11 @@
         </div>
     </nav>
 
-
     <div class="container-sm mt-5 accordion min-height-50" id="accordionExample">
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
                     Profile
                 </button>
             </h2>
@@ -205,18 +206,18 @@
 
     <!-- <script defer src="script/responsiveUserNavbar.js"></script> -->
     <!-- <script defer src="script/grade_handler.js"></script> -->
-    <footer class="container-fluid bg-secondary mt-5 mb-0">
-        <div class="row">
+    <footer class="container-fluid bg-primary">
+        <div class="row pt-3">
             <div class="col-12 col-md-4 justify-content-center row text-center">
                 <img class="col-12 img-fluid banner__img" src="images/gradulation-hat.png" alt="Grade Book Logo">
-                <div class="col-12 display-5 fw-bold">GRADE BOOK</div>
-                <div class="col-12 lead">Grades Soaring, Effortlessly Achieved!</div>
+                <div class="col-12 display-5 fw-bold text-light">GRADE BOOK</div>
+                <div class="col-12 lead text-light">Grades Soaring, Effortlessly Achieved!</div>
             </div>
 
-            <div class="col-12 col-md-8 row justify-content-center gap-5 text-center text-md-start">
+            <div class="col-12 col-md-8 row justify-content-center gap-5 text-center text-md-start mt-5">
                 <div class="col-4">
-                    <legend class="lead">SITE MAP</legend>
-                    <ul class="">
+                    <legend class="lead text-light">SITE MAP</legend>
+                    <ul class="list-inline">
                         <li><a href="index.html" class="text-light">Home</a></li>
                         <li><a href="contact.html" class="text-light">Contact</a></li>
                         <li><a href="about.html" class="text-light">About</a></li>
@@ -224,8 +225,8 @@
                 </div>
 
                 <div class="col-4">
-                    <ul class="">
-                        <legend class="lead">CONTACT</legend>
+                    <ul class="list-inline">
+                        <legend class="lead text-light">CONTACT</legend>
                         <li class=""><a href="https://github.com" class="text-light">Github</a></li>
                         <li class=""><a href="twitter.com" class="text-light">Twitter</a></li>
                         <li class=""><a href="youtube.com" class="text-light">Youtube</a></li>
@@ -233,7 +234,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="text-center text-muted"> &copy;2022 Grade Book. All right reserved.</div>
+            <div class="text-center mt-4 text-color-quaternary"> &copy;2022 Grade Book. All right reserved.</div>
         </div>
     </footer>
 
