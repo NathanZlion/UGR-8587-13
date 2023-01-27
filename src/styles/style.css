@@ -37,3 +37,11 @@
   z-index: 3;
 }
 
+.min-height-100 {
+  min-height: 100vh !important;
+}
+
+.min-height-50 {
+  min-height: 50vh !important;
+
+}

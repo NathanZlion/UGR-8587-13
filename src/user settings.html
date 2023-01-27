@@ -6,158 +6,240 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/website-icon.png">
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link href="styles/style_user.css" rel="stylesheet" type="text/css">
-    <link href="styles/style_user_setting.css" rel="stylesheet" type="text/css">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link href="styles/style.css" rel="stylesheet">
+
     <title>User-Settings</title>
 </head>
 
-<body>
-    <header class="header navbar">
-        <a href="#" class="active nav-branding" title="Home"><img class="header__logo" src="images/gradulation-hat.png"
-                alt="grade book logo"></a>
-        <h1 class="active title title--big">Settings</h1>
-        <div class="user grid grid-column nav-menu">
-            <div class="grid__item user__info" onclick="dropdown()">
-                <img class="logo" src="images/user.png" alt="profile img">
-                <p class="user__info-name grid__item-username">Abebe Kebede</p>
-                <img class="dropdown-button" src="images/downward arrow.png" alt="more options">
-            </div>
-            <!-- <div class="link grid__item grid__item-settings display--none"><a href="user settings.html">Settings</a></div> -->
-            <div class="link grid__item grid__item-settings display--none user_nav-menu"><a href="user.html"> Grades</a>
-            </div>
-            <div class="link grid__item grid__item-signout display--none user_nav-menu"><a href="index.html">Sign
-                    out</a></div>
+<body class="min-height-100">
+    <!-- navbar -->
+    <nav class="navbar navbar-secondary navbar-expand-sm bg-secondary justify-items-top">
+        <div class="container-fluid border-bottom">
+            <img src="images/gradulation-hat.png" class="navbar-brand img-fluid ms-2 me-5" alt="gradebook_logo"
+                id="logo" title="Home">
+
+            <div class="display-5 ms-auto me-auto d-none d-lg-flex">Settings</div>
+            <ul class="navbar me-2 mb-2 mb-lg-0 ">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="images/user.png" alt="profile">
+                        Abebe Kebede
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a class="row p-2" href="user.html">
+                                <div class="col-7">Grades</div>
+                                <img class="img-fluid col-4" src="images/home.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider bg-light">
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="row p-2" href="index.html">
+                                <div class="col-7">Sign Out</div>
+                                <img class="img-fluid col-4" src="images/logout.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <div class="container" onclick="dropdownRemove()">
 
-        <div id="success-message" class="hidden">SUCCESSFULLY UPDATED</div>
-        <h2 class="topic">Profile</h2>
-        <section class="grid">
+    <div class="container-sm mt-5 accordion min-height-50" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Profile
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
 
-            <!-- profile error message -->
-            <div id="profile-error" class="error"></div>
+                    <div class="row gap-5">
+                        <div class="col-2 col-md-2 d-md-flex align-items-center container-fluid justify-content-center">
+                            <img class="img-fluid shadow-lg border border-secondary rounded-pill" src="images/man.png"
+                                alt="profile pic">
+                        </div>
+                        <form class="col-12 col-md-8 p-5 container-fluid" action="" method="">
+                            <div class="mb-3">
+                                <label for="name" class="form-label text">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your full name"
+                                    required>
+                            </div>
 
-            <div class="align--center">
-                <div class="grid grid--col-2">
-                    <label class="grid__item" for="Name">Full Name :</label>
-                    <input type="text" name="Name" id="Name" placeholder="abebe kebede">
-                </div>
-                <div class="grid grid--col-2">
-                    <label class="grid__item" for="email">Email :</label>
-                    <input name="email" type="email" placeholder="Email Address" id="email">
-                </div>
-                <div>
-                    <input id="submit-profile-change" class="button button--secondary align--right" type="submit"
-                        value="UPDATE PROFILE" aria-label="save profile changes">
+                            <div class="mb-3">
+                                <label for="university" class="form-label">University Name</label>
+                                <input type="text" class="form-control" id="university"
+                                    placeholder="your university name" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email"
+                                    required>
+                            </div>
+
+                            <div class="mb-3 d-flex align-items-center">
+                                <button class="btn btn-success btn-lg ms-auto me-5" type="submit">Update</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="position--relative">
-            <div class="topic">Change Password</div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Change Password
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form class="col-12 col-md-8 p-5 container-fluid" action="" method="">
 
-            <!-- passsword error message -->
-            <div id="password-error" class="error"></div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Old Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="********" required>
+                        </div>
 
-            <form class="align--center" method="post" action="#">
-                <fieldset>
-                    <div class="grid grid--col-2">
-                        <label class="grid__item" for="oldPassword">Old Password : </label>
-                        <input type="password" id="oldPassword" placeholder="********" aria-label="old password" value="">
-                    </div>
-                    <div class="grid grid--col-2">
-                        <label class="grid__item" for="newPassword">New Password :</label>
-                        <input type="password" id="newPassword" placeholder="********" aria-label="new password" value="">
-                    </div>
-                    <div class="grid grid--col-2">
-                        <label class="grid__item" for="confirmPassword">Confirm Password : </label>
-                        <input type="password" id="confirmPassword" placeholder="********"aria-label="confirm password"value="">
-                    </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">New Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="********" required>
+                        </div>
 
-                    <input id="submit-password-change" class="button button--secondary align--right" 
-                        value="UPDATE PASSWORD" aria-label="save password changes">
-                </fieldset>
-            </form>
-        </section>
-        <hr>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="********" required>
+                        </div>
 
-        <section class="position--relative">
-            <div class="topic">Grading System</div>
-            <div class="align--center">
 
-            <!-- profile error message -->
-            <div id="grading-error" class="error"></div>
-            
-                <table title="Set_grading_system">
-                    <thead>
-                        <tr>
-                            <th>Grade</th>
-                            <th>GPA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A<sup>+</sup></td>
-                            <td><input type="number" aria-label="grade equal or above" value="4"></td>
-                        </tr>
-                        <tr>
-                            <td>A</td>
-                            <td><input type="number" aria-label="grade equal or above" value="4"></td>
-                        </tr>
-                        <tr>
-                            <td>A<sup>-</sup></td>
-                            <td><input type="number" aria-label="grade equal or above" value="4"></td>
-                        </tr>
-                        <tr>
-                            <td>B<sup>+</sup></td>
-                            <td><input type="number" aria-label="grade equal or above" value="3.75">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>B</td>
-                            <td><input type="number" aria-label="grade equal or above" value="3.5"></td>
-                        </tr>
-                        <tr>
-                            <td>B-</td>
-                            <td><input type="number" aria-label="grade equal or above" value="3.25">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>C<sup>+</sup></td>
-                            <td><input type="number" aria-label="grade equal or above" value="3"></td>
-                        </tr>
-                        <tr>
-                            <td>C</td>
-                            <td><input type="number" aria-label="grade equal or above" value="2.75">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>C<sup>-</sup></td>
-                            <td><input type="number" aria-label="grade equal or above" value="2"></td>
-                        </tr>
-                        <tr>
-                            <td>D</td>
-                            <td><input type="number" aria-label="grade equal or above" value="1.75">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>F</td>
-                            <td><input type="number" aria-label="grade equal or above" value="1.5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <input id="submit-grading-change" class="button button--secondary align--right" type="submit"
-                    value="SAVE CHANGES" aria-label="save grading system changes">
+                        <div class="mb-3 d-flex align-items-center">
+                            <button class="btn btn-success btn-lg ms-auto me-5" type="submit">Update Password</button>
+                        </div>
+                    </form>
+
+                </div>
             </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Grading System
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <form class="accordion-body w-50 container-fluid text-center">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Grading</th>
+                                <th>Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A</td>
+                                <td><input type="text" min="1" max="4" class="form-control" value="4"></td>
+                            </tr>
+                            <tr>
+                                <td>A<sup>-</sup></td>
+                                <td><input type="text" min="1" max="4" class="form-control" value="3.75"></td>
+                            </tr>
+                            <tr>
+                                <td>B<sup>+</sup></td>
+                                <td><input type="text" min="1" max="4" class="form-control" value="3.75"></td>
+                            </tr>
+                            <tr>
+                                <td>B</td>
+                                <td><input type="text" min="1" max="4" class="form-control" value="3.75"></td>
+                            </tr>
+                            <tr>
+                                <td>B<sup>-</sup></td>
+                                <td><input type="text" min="1" max="4" class="form-control" value="3.75"></td>
+                            </tr>
+                            <tr>
+                                <td>C<sup>+</sup></td>
+                                <td><input type="text" min="1" max="4" class="form-control" value="3.75"></td>
+                            </tr>
+                            <tr>
+                                <td>C</td>
+                                <td><input type="text" min="1" max="4" class="form-control" value="3.75"></td>
+                            </tr>
+                            <tr>
+                                <td>C<sup>-</sup></td>
+                                <td><input type="text" min="1" max="4" class="form-control" value="3.75"></td>
+                            </tr>
+                            <tr>
+                                <td>D</td>
+                                <td><input type="text" min="1" max="4" class="form-control" value="3.75"></td>
+                            </tr>
+                            <tr>
+                                <td>F</td>
+                                <td><input type="text" min="1" max="4" class="form-control" value="3.75"></td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-        </section>
+                    <div class="mb-3 d-flex align-items-center">
+                        <button class="btn btn-success btn-lg ms-auto me-5" type="submit">Update Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <script defer src="script/responsiveUserNavbar.js"></script>
-    <script defer src="script/settingsValidator.js"></script>
+    <!-- <script defer src="script/responsiveUserNavbar.js"></script> -->
+    <!-- <script defer src="script/grade_handler.js"></script> -->
+    <footer class="container-fluid bg-secondary mt-5 mb-0">
+        <div class="row">
+            <div class="col-12 col-md-4 justify-content-center row text-center">
+                <img class="col-12 img-fluid banner__img" src="images/gradulation-hat.png" alt="Grade Book Logo">
+                <div class="col-12 display-5 fw-bold">GRADE BOOK</div>
+                <div class="col-12 lead">Grades Soaring, Effortlessly Achieved!</div>
+            </div>
+
+            <div class="col-12 col-md-8 row justify-content-center gap-5 text-center text-md-start">
+                <div class="col-4">
+                    <legend class="lead">SITE MAP</legend>
+                    <ul class="">
+                        <li><a href="index.html" class="text-light">Home</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                        <li><a href="about.html" class="text-light">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4">
+                    <ul class="">
+                        <legend class="lead">CONTACT</legend>
+                        <li class=""><a href="https://github.com" class="text-light">Github</a></li>
+                        <li class=""><a href="twitter.com" class="text-light">Twitter</a></li>
+                        <li class=""><a href="youtube.com" class="text-light">Youtube</a></li>
+                        <li class=""><a href="facebook.com" class="text-light">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-muted"> &copy;2022 Grade Book. All right reserved.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
