@@ -86,7 +86,7 @@
   background-image: url("../images/graduating students.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   backdrop-filter: blur(8px);
 }
 
