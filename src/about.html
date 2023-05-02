@@ -5,104 +5,159 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <link rel="icon" type="image/png" href="images/website-icon.png">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+    <title>ABOUT</title>
 </head>
 
 <body>
-    <nav>
-        <a href="#" title="Home"><img src="images/graduation hat.png" width="20px">Grade Book</a>
-        <a href="index.html"><button>Home</button></a>
-        <a href="contact.html"><button>Contact</button></a>
-        <a href="about.html"><button>About</button></a>
-        <a href="login.html"><button>Login</button></a>
+    <!-- navbar -->
+    <nav class="navbar navbar-secondary navbar-expand-sm bg-primary ">
+        <div class="container-fluid">
+            <img src="images/gradulation-hat.png" class="navbar-brand img-fluid ms-2 me-5" alt="gradebook_logo" id="logo"
+                title="Home">   
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="collapse navbar-collapse navbar-nav mb-2 mb-lg-0 justify-content-center gap-5 bg-primary text-light pb-2"
+                id="navbarSupportedContent">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-dark px-3 text-light border-light" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-dark px-3 text-light border-light" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-dark px-3 text-light border-light active" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-dark px-3 text-light border-light" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
-        <h1>About GRADE BOOK</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sequi dolor
-            optio sint esse aperiam iure voluptates, assumenda delectus illum neque labore
-            error velit veritatis amet odit ipsam, nobis natus obcaecati ullam aliquam, ad
-            dicta commodi beatae. Asperiores dolorem reiciendis itaque rerum quos esse aut.</p>
+    <!-- the fullscreen welcome page -->
+    <main id="height--fullheight" class="d-grid gap-5 intro border container-fluid bg-image--blurred justify-content-center align-content-center mb-5">
+        <h1 class="display-1 w-100 text-center fw-bold">About Grade Book</h1>
+
+        <!-- scroll down button -->
+        <div id="scroll" class="btn-outline-primary position-absolute">
+            <div class="rounded-pill p-2 h-5 w-5 d-none d-lg-flex bg-light btn btn-outline-primary" title="learn more">
+                <img src="images/downward arrow.png" class="img-fluid" alt="Learn More">
+            </div>
+        </div>
     </main>
 
-    <section>
-        <div>
-            <h2>Lorem, ipsum.</h2>
-            <img src="images/gradebook.png" alt="card image">
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-        </div>
-        <div>
-            <h2>Lorem, ipsum.</h2>
-            <img src="images/gradebook.png" alt="card image">
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-        </div>
-        <div>
-            <h2>Lorem, ipsum.</h2>
-            <img src="images/gradebook.png" alt="card image">
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-        </div>
-    </section>
 
-    <section>
-        <h2>HOW TO USE</h2>
-
-        <video id="video" controls="controls" width="400px" preload="metadata">
-            <source src="video/Change Your Life – One Tiny Step at a Time.mp4" type="video/mp4" />
-            <track label="English-vtt" kind="subtitles" srclang="en"
-                src="Change Your Life – One Tiny Step at a Time.vtt" default />
-        </video>
-
-        <ul>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, labore. Odio facere eum corporis
-                laudantium!
-            </p>
-            <li>Lorem ipsum dolor sit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel sed porro perspiciatis!</li>
-            <li>Lorem ipsum, dolor sit amet necessitatibus odit? Distinctio?</li>
-            <li>Lorem ipsum dolor sit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel sed porro perspiciatis!</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit placeat necessitatibus odit? Distinctio?
-            </li>
-        </ul>
-    </section>
-    <hr>
-    <section>
-        <button>GET STARTED</button>
-        <p>Already have an Account?</p>
-        <button>LOG IN</button>
-    </section>
-    <footer>
-        <div>
-            <div>
-                <img src="images/graduation hat.png" alt="Grade Book Logo">
-                <p>Grade Book</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem perferendis maiores nostrum
-                    fugit debitis quaerat.</p>
+    <div id="section_1" class="container-fluid">
+        <section class="row align-items-center justify-content-evenly gap-3">
+            <!-- card Items -->
+            <div class="card col-sm-10 col-lg-3 shadow-lg" style="width: 19rem;">
+                <img src="images/gradebook.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Easily keep track of all your grades in one place with our
+                        user-friendly interface. You can add, edit, and delete grades for different subjects,
+                        and view your overall academic progress over time. </p>
+                </div>
             </div>
-            <div>
-                <div>
-                    <nav>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </nav>
+
+            <div class="card col-sm-10 col-lg-3 shadow-lg" style="width: 19rem;">
+                <img src="images/gradebook.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Our GPA calculator allows you to quickly and accurately calculate your
+                        grade point average and CGPA. You can also view your grades in a graph format to track your
+                        progress
+                        and identify areas for improvement.</p>
+                </div>
+            </div>
+
+            <div class="card col-sm-10 col-lg-3 shadow-lg" style="width: 19rem;">
+                <img src="images/gradebook.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Easily create personalized study plans that fit your schedule and
+                        learning style. Our platform allows you to add flashcards, notes, and reminders for exams and
+                        assignments, so you can stay on top of your academic commitments..</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container text-center mb-3 p-5">
+            <h2 class="h1 mb-5 text-decoration-underline">HOW TO USE</h2>
+            <div class="row text-center justify-content-center">
+                <video class="col-10 col-lg-6" id="video" controls="controls" width="400px" preload="metadata">
+                    <source src="video/Change Your Life – One Tiny Step at a Time.mp4" type="video/mp4" />
+                    <track label="English-vtt" kind="captions" srclang="en" src="video/video_transcription.vtt"
+                        default />
+                </video>
+
+                <ul class="col-10 col-lg-6 p-4 text-start">
+                    <li>Learn how to create an account and log in to the website.</li>
+                    <li>Understand how to add, edit and delete grades from different subjects.</li>
+                    <li>Calculate your GPA and CGPA with our easy to use calculator.</li>
+                    <li>Create personalized study plans and flashcards for your exams.</li>
+                    <li>Set reminders for assignments, exams, and deadlines to stay on top of your academic schedule.
+                    </li>
+                    <li>Track your academic progress over time and see where you can improve.</li>
+                </ul>
+
+            </div>
+        </section>
+        <hr>
+        <section class="d-grid align-content-center justify-content-center">
+            <a class="btn btn-lg btn-primary " href="signup-1.html">GET STARTED</a>
+            <p class="text-muted">Already have an Account?</p>
+            <a class="btn btn-outline-secondary" href="login.html">Login</a>
+        </section>
+        <hr>
+    </div>
+
+
+
+    <footer class="container-fluid bg-primary">
+        <div class="row pt-3">
+            <div class="col-12 col-md-4 justify-content-center row text-center">
+                <img class="col-12 img-fluid banner__img" src="images/gradulation-hat.png" alt="Grade Book Logo">
+                <div class="col-12 display-5 fw-bold text-light">GRADE BOOK</div>
+                <div class="col-12 lead text-light">Grades Soaring, Effortlessly Achieved!</div>
+            </div>
+
+            <div class="col-12 col-md-8 row justify-content-center gap-5 text-center text-md-start mt-5">
+                <div class="col-4">
+                    <legend class="lead text-light">SITE MAP</legend>
+                    <ul class="list-inline">
+                        <li><a href="index.html" class="text-light">Home</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                        <li><a href="about.html" class="text-light">About</a></li>
+                    </ul>
                 </div>
 
-                <address>
-                    <ul>
-                        <p>Contact Us</p>
-                        <li><a href="#">Github</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Youtube</a></li>
-                        <li><a href="#">Facebook</a></li>
+                <div class="col-4">
+                    <ul class="list-inline">
+                        <legend class="lead text-light">CONTACT</legend>
+                        <li class=""><a href="https://github.com" class="text-light">Github</a></li>
+                        <li class=""><a href="twitter.com" class="text-light">Twitter</a></li>
+                        <li class=""><a href="youtube.com" class="text-light">Youtube</a></li>
+                        <li class=""><a href="facebook.com" class="text-light">Facebook</a></li>
                     </ul>
-                </address>
+                </div>
             </div>
+            <div class="text-center mt-4 text-color-quaternary"> &copy;2022 Grade Book. All right reserved.</div>
         </div>
-        <p> &copy;2022 Lorem, ipsum dolor. All right reserved.</p>
-
     </footer>
-
-
+    <script>
+        let button = document.getElementById("scroll");
+        var section = document.getElementById("section_1");
+        
+        button.addEventListener("click", function () {
+            section.scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
 </body>
 
 </html>
